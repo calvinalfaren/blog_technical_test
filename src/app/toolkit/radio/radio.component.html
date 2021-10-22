@@ -1,0 +1,9 @@
+<div class="radio-wrapper">
+  <div *ngFor="let item of items">
+    <input type="radio" [name]="name" class="radio" [value]="item.value"
+      (click)="handleRadioClick(item.value)"> {{ item.text }}
+  </div>
+</div>
+<div class="field-error">
+  {{ errorMessage }}
+</div>

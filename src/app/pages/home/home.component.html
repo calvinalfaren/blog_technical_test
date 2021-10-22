@@ -1,0 +1,32 @@
+<div class="home">
+  <ng-container *ngFor="let post of listPosts; let i = index">
+    <div *ngIf="i == 0" class="home_post_first" [queryParams]="{ id: post?.id, page: 1 }" [routerLink]="'detail/'">
+      <div style="width: 60%; height: 300px;">
+        <img *ngIf="!post.image_url" src="../../../assets/img/app/no-image.png" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+        <img *ngIf="post.image_url" src="{{post.image_url}}" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div style="padding: 12px;">
+        <h5>{{ post.title }}</h5>
+        <div>{{ post.short_text }}</div>
+      </div>
+    </div>
+  </ng-container>
+  <div class="home_post_half">
+    <ng-container *ngFor="let post of listPosts; let i = index">
+      <!-- <img *ngIf="!post.image_url" src="../../../assets/img/app/no-image.png" alt="">
+      <img *ngIf="post.image_url" src="{{post.image_url}}" alt="">
+      <div>{{ post.title }}</div>
+      <div>{{ post.short_text }}</div> -->
+      <div class="card" *ngIf="i !== 0" [queryParams]="{ id: post?.id, page: 1 }" [routerLink]="'detail'">
+        <div style="height: 250px;" class="card_containt">
+          <img *ngIf="post.image_url" src="{{post.image_url}}" class="card-img-top" alt="...">
+          <img *ngIf="!post.image_url" src="../../../assets/img/app/no-image.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">{{ post.short_text }}</p>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

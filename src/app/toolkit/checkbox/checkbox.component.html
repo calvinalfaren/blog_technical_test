@@ -1,0 +1,29 @@
+<!--<div class="field">
+  <div class="checkbox-area">
+    <input type="checkbox" (change)="handleChange($event)" class="checkbox"
+      [checked]="value"> 
+    <span class="checkbox-content">
+      <ng-content></ng-content>
+    </span>
+  </div>
+  <div class="help-block text-danger">
+    {{errorMessage}}
+  </div>
+</div>-->
+
+<label class="checkbox-container" [class.disabled]="disabled">
+  <input [class.hide]="disabled" 
+    [attr.disabled]="disabled ? true : null"
+    type="checkbox" (change)="handleChange($event)" [checked]="value">
+  <ng-container *ngIf="disabled && value == 1">
+    &#10004;
+  </ng-container>
+  <ng-container *ngIf="disabled && value == 0">
+    &#88;
+  </ng-container>
+  <span [class.hide]="disabled" class="checkmark"></span>
+  <ng-content></ng-content>
+  <div class="help-block text-danger">
+    {{errorMessage}}
+  </div>
+</label>

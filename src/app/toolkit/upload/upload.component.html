@@ -1,0 +1,7 @@
+<input [class.hide]="value != null" type="file" #file (change)="upload()" accept="{{fileType}}" width="100%">
+<div *ngIf="value" class="exist">
+  <a [href]="getFileUrl()" download>{{ value }}</a>
+  <button class="fa fa-remove" type="button" (click)="setValue(null)">Delete</button>
+</div>
+
+  <!--<input type="file" name="fileToUpload" id="fileToUpload">-->

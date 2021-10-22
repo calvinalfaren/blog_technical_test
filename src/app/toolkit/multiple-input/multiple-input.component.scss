@@ -1,0 +1,35 @@
+@import "../../theme/styles/variables";
+
+.multiple-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    color: #6c757d;
+    background: #fff;
+    border: solid 1px #ebedf2;
+    border-radius: 6px;
+    -webkit-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    display: flex;
+    flex-wrap: wrap;
+
+    .no-border {
+        flex: 1;
+    }
+
+    .multiple-value-field {
+        border-radius: 3px;
+        background-color: $blue-color;
+        color: #fff;
+        padding: 0px 8px;
+        margin-right: 8px;
+        font-size: 14px;
+        align-self: center;
+        display: flex;
+        margin-bottom: 8px;
+
+        .close-icon {
+            margin-right: 8px;
+        }
+    }
+}

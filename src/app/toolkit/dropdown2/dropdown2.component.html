@@ -1,0 +1,45 @@
+<div class="dropdown-wrapper">
+  <div [class.hide]="addNewMode" class="dropdown-input default" id="change-border{{id}}"
+      [class.dropdown-error]="errorMessage"
+      [class.disabled]="disabled"
+      (click)="toggleDropdown($event, id)">
+    <input [placeholder]="placeholder" type="text"
+        [(value)]="text"
+        class="input"
+        [class.disabled]="disabled"
+        disabled="true"/>
+    <span class="fa fa-angle-up" *ngIf="dropdownOpened" (click)="closeDropdown($event, id)"></span>
+    <span class="fa fa-angle-down" *ngIf="!dropdownOpened" (click)="openDropdown($event, id)"></span>
+  </div>
+  
+  <div *ngIf="addNewMode" class="add-dropdown">
+    <input  [placeholder]="addNewPlaceholder" class="input-new-organization" [(ngModel)]="addNewInput">
+    <button class="button-add-organization" type="button" (click)="triggerAddNewEvent()">
+        <span class="text-add">Add</span>
+    </button>
+
+    <button class="button-cancel-organization" type="button" (click)="setAddNewMode(false)">
+        <span class="text-cancel">Cancel</span>
+    </button>
+  </div>
+  <div *ngIf="items.length == 0 && dropdownOpened" class="dropdown-noresult dropdown-area">
+    No Result Found
+  </div>
+  <div *ngIf="dropdownOpened" class="dropdown-area" [style.max-height]="maxHeight + 'px'">
+    <div *ngIf="input == true" class="input-dropdown">
+      <input #field class="input full" [ngModel]="search" (ngModelChange)="searchChange.emit($event)" type="text" [placeholder]="searchPlaceholder">
+    </div>
+    <div *ngIf="enableAddNew" class="dropdown-area-item padding-horizontal" (click)="setAddNewMode(true)">
+      {{ addNewText }}
+    </div>
+    <div *ngFor="let item of items" 
+          class="dropdown-area-item"
+          (click)="triggerDropdownItemClick(item ,$event.target.innerText, id)">
+      <ng-template [ngTemplateOutlet]="itemTemplate" [ngTemplateOutletContext]="{item: item}"></ng-template>
+    </div>
+  </div>
+  <div class="help-block text-danger">
+    {{ errorMessage }}
+  </div>
+</div>
+  

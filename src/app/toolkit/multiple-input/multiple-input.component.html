@@ -1,0 +1,17 @@
+<div class="multiple-input">
+    <span class="multiple-input-sel" *ngFor="let item of value"> 
+        <!-- {{ item }}
+        <button type="button" (click)="removeInput(item)" class="fa fa-remove"></button> -->
+        
+        <div class="multiple-value-field">
+            <div (click)="removeInput(item)"  class="close-icon">
+              <img src="../../../assets/img/icons/uil-times.png" alt="" class="icon8">
+            </div>
+            {{ item }}
+        </div>
+    </span>
+    <input [ngModel]="input" (ngModelChange)="handleInputChange($event)" class="no-border">
+</div>
+<div class="field-error">
+    {{ errorMessage }}
+</div>

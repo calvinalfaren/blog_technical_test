@@ -1,0 +1,9 @@
+<ckeditor
+  [config]="config"
+  [(ngModel)]="value"
+  (change)="handleChange($event)"
+  debounce="500">
+</ckeditor>
+<div class="help-block text-danger">
+  {{errorMessage}}
+</div>

@@ -1,0 +1,38 @@
+.search-dropdown-item {
+    padding: 12px;
+}
+
+
+.search-dropdown-item:hover {
+    cursor: pointer;
+    background: whitesmoke;
+}
+
+.search-dropdown-item.disabled {
+    background: darkgray;
+}
+
+.search-dropdown-item.disabled:hover     {
+    cursor: no-drop;
+}
+
+.field {
+    position: relative;
+}
+
+.search-dropdown, .search-not-found {
+    margin-top: -12px;
+    position: absolute;
+    background: white;
+    width: 100%;
+    z-index: 1;
+    border:1px solid lightgray;
+}
+
+.search-not-found {
+    padding: 12px;
+}
+
+app-input[class="selected"] > .field > input {
+    background: whitesmoke;
+}

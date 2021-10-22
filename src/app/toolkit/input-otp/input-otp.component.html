@@ -1,0 +1,11 @@
+<div class="input-otp">
+    <input (keyup)="onChange($event)"
+        [class]="inputClass"
+        [class.input-error]="errorMessage"
+        [placeholder]="placeholder"
+        [class.disabled]="disabled" [(ngModel)]="value" [type]="type" maxLength="1" size="1" min="0" max="9"
+        #input
+        type="text"
+        pattern="[0-9]*" inputmode="numeric" digitOnly>
+    <div class="help-block text-danger">{{errorMessage}}</div>
+</div>

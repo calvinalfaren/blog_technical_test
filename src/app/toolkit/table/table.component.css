@@ -1,0 +1,14 @@
+table {
+    width: 100%;
+    margin-top: 12px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #e9ebec;
+    text-align: center;
+}
+
+.button-link {
+    margin-right: 4px;
+}

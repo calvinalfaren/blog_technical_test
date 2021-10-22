@@ -1,0 +1,21 @@
+<div class="dropdown-wrapper">
+  <div class="input-wrapper" 
+      (click)="toggleDropdown($event)">
+    <input [placeholder]="placeholder" type="text"
+        [(value)]="text"
+        class="input"
+        disabled="true"/>
+    <span class="fa fa-angle-up" *ngIf="dropdownOpened" (click)="closeDropdown($event, id)"></span>
+    <span class="fa fa-angle-down" *ngIf="!dropdownOpened" (click)="openDropdown($event, id)"></span>
+  </div>
+  <div *ngIf="dropdownOpened" class="dropdown-area">
+    <div *ngFor="let item of items" 
+          class="dropdown-area-item"
+          (click)="triggerDropdownItemClick(item)">
+      {{ item.text }}
+    </div>
+  </div>
+  <div class="field-error">
+    {{ errorMessage }}
+  </div>
+</div>

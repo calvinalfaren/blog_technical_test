@@ -1,0 +1,16 @@
+<div class="app-modal-wrapper" [class.hide]="!opened">
+  <div class="app-modal">
+    <button class="button-link right" (click)="close()">
+      <span class="fa fa-close"></span>
+    </button>
+    <div class="app-modal-title">
+      {{ title }}
+    </div>
+    <div *ngIf="!htmlMessage" class="app-modal-content">
+      <ng-content></ng-content>
+    </div>  
+    
+    <div *ngIf="htmlMessage" class="app-modal-content" [innerHtml]="htmlMessage">
+    </div>  
+  </div>
+</div>

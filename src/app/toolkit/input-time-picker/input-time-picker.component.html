@@ -1,0 +1,13 @@
+<div class="field">
+    <input #input
+            [ngxTimepicker]="picker" (keyup)="onChange($event)"
+           [class]="inputClass"
+           [class.input-error]="errorMessage"
+           [placeholder]="placeholder"
+           [format]="24"
+           [attr.disabled]="disabled ? true : null"
+           [class.disabled]="disabled"
+           [value]="value" [type]="type">
+    <div class="help-block text-danger" *ngIf="!value">{{errorMessage}}</div>
+    <ngx-material-timepicker (timeSet)="handleTimeSet($event)" #picker [format]="24"></ngx-material-timepicker>
+</div>

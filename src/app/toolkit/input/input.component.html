@@ -1,0 +1,9 @@
+<div class="field">
+    <input (keyup)="onChange($event)"
+           [class]="inputClass"
+           [class.input-error]="errorMessage"
+           [placeholder]="placeholder"
+           [attr.disabled]="disabled ? true : null"
+           [class.disabled]="disabled" [(ngModel)]="value" [type]="type" [min]="min" [max]="max">
+    <div class="help-block text-danger" *ngIf="errorMessage">{{errorMessage}}</div>
+</div>

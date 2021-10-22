@@ -1,0 +1,12 @@
+<span *ngFor="let x of counter(5); let idx = index">
+  <a>
+    <i *ngIf="rating >= (idx + 1)" class="fa fa-star" aria-hidden="true"></i>
+    <i *ngIf="rating < (idx + 1)" class="fa fa-star-o" aria-hidden="true"></i>
+
+  </a>
+</span>
+
+<!-- <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li> -->

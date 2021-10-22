@@ -1,0 +1,14 @@
+<div class="field">
+    <textarea class="form-control input"
+      [rows]="rows"
+      [placeholder]="placeholder"
+      [class.disabled]="disabled" 
+      [class.textarea-error]="errorMessage"
+      (keyup)="handleKeyup($event)"
+      [attr.disabled]="disabled ? true : null"
+      [(ngModel)]="value"></textarea>
+
+    <div class="help-block text-danger">
+      {{errorMessage}}
+    </div>
+  </div>

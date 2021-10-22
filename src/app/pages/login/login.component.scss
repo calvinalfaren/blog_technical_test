@@ -1,0 +1,243 @@
+@import "../../theme/styles/variables";
+
+.login-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #313A46;
+  color: #000;
+
+  .input {
+    background: #f1f3fa;
+    caret-color: #7079ff;
+  }
+
+  .card {
+    padding: 15px;
+    background: white;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+
+    .btn-link {
+      padding: 0;
+      &.forgot {
+        font-size: 14px;
+      }
+      &:hover {
+        color: $main-color;
+      }
+    }
+
+  }
+
+  .email, .passw {
+    margin: 1.5rem 0 0 0!important;
+  }
+
+  .ng-invalid {
+    padding-bottom: 0;
+  }
+
+  .checkbox-container {
+    margin-top: 24px;
+    margin-bottom: 40px!important;
+  }
+
+  .auth-sep {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    line-height: 20px;
+    font-size: 15px;
+    text-align: center;
+    display: block;
+    position: relative;
+    & > span {
+      display: table-cell;
+      width: 30%;
+      white-space: nowrap;
+      padding: 0 14px;
+      color: $gray;
+      & > span {
+        margin-top: -11px;
+        display: block;
+        font-weight: 300;
+      }
+    }
+    &:before, &:after {
+      border-top: solid 1px $gray-light;
+      content: "";
+      height: 1px;
+      width: 35%;
+      display: table-cell;
+    }
+  }
+
+  .login-help {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      display: inline-block;
+      margin-left: 10px;
+      &:first-child {
+        margin-left: 0;
+      }
+      i {
+        cursor: pointer;
+        transition: all 0.1s ease;
+        color: #fff;
+        padding: 9px 9px 6px 9px;
+        font-size: 12px;
+        background-color: $main-color;
+        &.socicon-facebook {
+          background-color: $facebook-color;
+        }
+        &.socicon-twitter {
+          background-color: $twitter-color;
+        }
+        &.socicon-google {
+          background-color: $google-color;
+        }
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+
+  .cursor {
+    cursor: pointer;
+  }
+
+  .btn-main {
+    width: 100% !important;
+  }
+
+  .fb-btn-dropdown {
+    margin-top: 25px !important;
+  }
+
+  .login {
+    &__register {
+      margin-top: 36px;
+    }
+  }
+
+  .card-title {
+    font-size: 2rem;
+  }
+
+  .passw-field {
+    display: inline-block;
+  }
+
+  .forgot-passw {
+    a {
+      color: $violet;
+    }
+  }
+
+  .logo {
+    width: 162px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    margin-bottom: 38px;
+  }
+
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+  }
+  .visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+  }
+}
+
+
+
+
+/*Media Queries*/
+/* Landscape */
+@media only screen
+and (min-width: 320px)
+and (max-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+  .login-container {
+    height: auto;
+  }
+
+  .logo {
+    margin-top: 10px;
+  }
+
+  .fb-dropdown-menu {
+    transform: translate3d(207px, -122px, 0px) !important;
+  }
+}
+
+/* Landscape */
+@media only screen
+and (min-width: 375px)
+and (max-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+  .login-container {
+    height: auto;
+  }
+
+  .logo {
+    margin-top: 10px;
+  }
+  .fb-dropdown-menu {
+    transform: translate3d(201px, -121px, 0px) !important;
+  }
+}
+
+/* Landscape */
+@media only screen
+and (min-width: 414px)
+and (max-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) {
+  .login-container {
+    height: auto;
+  }
+
+  .logo {
+    margin-top: 10px;
+  }
+
+  .fb-dropdown-menu {
+    transform: translate3d(229px, -120px, 0px) !important;
+  }
+}
+
+/* Landscape */
+@media only screen
+and (min-width: 375px)
+and (max-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) {
+  .login-container {
+    height: auto;
+  }
+
+  .logo {
+    margin-top: 10px;
+  }
+
+  .fb-dropdown-menu {
+    transform: translate3d(126px, -120px, 0px) !important;
+  }
+
+
+}

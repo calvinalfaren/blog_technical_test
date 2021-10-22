@@ -1,0 +1,18 @@
+<div class="quantity-field-area">
+  <app-button btnClass="button h100 quantity-btn"
+              type="button"
+              (click)="remove($event)">
+    <i class="material-icons">remove</i>
+  </app-button>
+  <app-input [(value)]="value" 
+              type="number"
+              (keyup)="change($event)"></app-input>
+  <app-button btnClass="button h100 quantity-btn" 
+              type="button"
+              (click)="add($event)">
+    <i class="material-icons">add</i>
+  </app-button>
+</div>
+<div class="field-error">
+  {{errorMessage}}
+</div>

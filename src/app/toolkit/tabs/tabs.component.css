@@ -1,0 +1,19 @@
+.tabs-header-item {
+    display: inline-block;
+    padding: 16px;
+    font-size: 16px;
+}
+
+.tabs-header-item.selected {
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+
+.tabs-header-item:hover {
+    background: whitesmoke;
+    cursor: pointer;
+}
+
+.tabs-header {
+    border-bottom: 1px solid lightgray;
+}

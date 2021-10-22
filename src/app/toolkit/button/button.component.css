@@ -1,0 +1,77 @@
+button.disabled {
+    opacity: 0.4;    
+}
+
+button.disabled:hover {
+    cursor: no-drop;
+}
+
+.button {
+    border: 1px solid;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.button-link {
+    background: transparent;
+    border: 0;
+    color: blue;
+    outline: none;
+    font-weight: bold;
+    
+}
+
+.button-link:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.primary {
+    background: #ffee61;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid yellow;
+}
+
+.blue {
+    background: skyblue;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid whitesmoke;
+
+}
+
+.red {
+    background: darkred;
+    color: darkgray;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid red;
+    
+}
+
+.green {
+    color: #fff;
+    border: 1px solid #55a32a;
+    background: #55a32a;
+    font-weight: bold;
+}
+
+.f24 {
+    font-size: 24px;
+}
+
+.quantity-btn {
+    padding: 6px 8px;
+    border-radius: 0;
+    background: white;
+    height: 100%;
+    border: 1px solid lightgray;
+}

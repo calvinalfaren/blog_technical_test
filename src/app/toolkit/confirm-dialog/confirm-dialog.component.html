@@ -1,0 +1,9 @@
+<app-modal [title]="title" [(opened)]="opened" *ngIf="opened">
+  <div class="confirm-dialog-content">
+    <ng-content></ng-content>
+  </div>
+  <div class="confirm-dialog-actions">
+    <app-button btnClass="btn btn-primary" (click)="triggerYes($event)">Yes</app-button>
+    <app-button btnClass="btn btn-danger" (click)="triggerCancel($event)">Cancel</app-button>
+  </div>
+</app-modal>

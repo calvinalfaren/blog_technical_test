@@ -1,0 +1,14 @@
+<div class="tabs-header">
+    <div class="tabs-header-item" *ngFor="let item of items"
+        [class.selected]="currentTabIndex == item.getIndex()"
+        (click)="clickTab(item.getIndex())">
+      {{ item.getTitle() }}
+    </div>
+</div>
+<div class="tabs-body">
+  <div  *ngFor="let item of items"
+        class="tabs-item"
+        [class.hide]="currentTabIndex != item.getIndex()" 
+        [innerHTML]="item.getElement()">
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<table cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <th *ngFor="let column of columns">
+        {{column[1]}}
+      </th>
+      <th *ngIf="hasAction()">
+        Action
+      </th>
+    </tr>
+    <tr *ngFor="let source of sources | paginate: {id : 'pagination', itemsPerPage : pageSize, currentPage: page, totalItems : total }">
+      <td *ngFor="let data of source">
+        {{ data }}
+      </td>
+      <td *ngIf="hasAction()">
+          <button *ngFor="let action of actions" class="button-link" (click)="triggerAction(source,action[0])">
+            {{action[1]}}
+          </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="pagination-wrapper">
+  <pagination-controls (pageChange)="getPage($event)" id="pagination"></pagination-controls>
+</div>

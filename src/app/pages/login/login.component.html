@@ -1,0 +1,58 @@
+<div class="login-container login">
+
+    <div class="col-xl-4 col-md-6 col-sm-10 col-12 mx-auto">
+        <!-- <img src="/assets/img/logo/logo.png" alt="TheFBhub" class="logo"> -->
+        <div class="card">
+            <div class="card-body">
+                <!-- <ngx-skeleton-loader *ngIf="showSkltn; else skeleton" count="11" appearance="line" [theme]="{height: '30px', 'margin-bottom': '10px'}"></ngx-skeleton-loader> -->
+                  <!-- <ng-template #skeleton> -->
+                  <h4 class="card-title text-center font-weight-bold">Login</h4>
+
+                  <app-form #form (successValidation)="login($event)" [rules]="getRules()" [validationMessages]="getValidationMessages()">
+
+                      <!-- <div *ngIf="error != null" @fade id="error-box"><span>{{error}}</span></div> -->
+
+                      <div class="email" >
+                          <div class="field-label">Email</div>
+                          <app-input #field [(value)]="email" (error)="setErrorMessage()" name="email" placeholder="" type="email" tabindex="0">
+                          </app-input>
+                      </div>
+
+                      <div class="passw" >
+                          <div class="field-label passw-field">Password</div>
+                          <!-- <div class="field-label forgot-passw pull-right"><a [routerLink]="'/forgot-password'" tabindex="2">{{ 'LOGIN.FORGOT_PASSWORD_LABEL' | translate }}</a> -->
+                          <!-- </div> -->
+                          <app-input #field [value]="model.password" (error)="setErrorMessage()" name="password" placeholder="" type="password"
+                              tabindex="1"></app-input>
+                      </div>
+
+                      <div class="clearfix"></div>
+                      <!-- <app-checkbox [(value)]="userKey" name="remember_me" tabindex="3">
+                          {{ 'LOGIN.REMEMBER_ME' | translate }}</app-checkbox> -->
+
+                      <app-button  #submit btnClass="btn btn-main btn-block" [disabled]="disabledBtn" (click)="disabled()"
+                          type="submit" tabindex="4">Login</app-button>
+                  </app-form>
+                <!-- </ng-template> -->
+                <!-- <button class="btn btn-link cursor login__register" routerLink="/register">Don't have an account? Register here!</button> -->
+            </div>
+        </div>
+        <div class="fb-btn-dropdown language-chosen dropup">
+            <!-- <ngx-skeleton-loader *ngIf="showSkltn; else skeleton2" count="1" appearance="line" [theme]="{height: '30px', 'margin-bottom': '10px'}"></ngx-skeleton-loader> -->
+            <!-- <ng-template #skeleton2> -->
+              <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <img [src]="getLanguageImage(chosenLanguage)" alt="" class="flag-img">
+                  <span>{{ getLanguageName ? getLanguageName : chosenLanguage.name  }}</span>
+                  <img src="assets/img/icons/uil-angle-right_white.png" alt="" class="flag-arrow">
+              </a>
+              <div class="dropdown-menu fb-dropdown-menu">
+                  <a *ngFor="let language of languageList" class="dropdown-item" (click)="changeLanguage(language)">
+                    <img [src]="getLanguageImageList(language)" alt="">
+                    {{ language.name }}
+                  </a>
+              </div>
+            <!-- </ng-template> -->
+        </div>
+    </div>
+</div>

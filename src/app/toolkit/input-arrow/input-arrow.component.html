@@ -1,0 +1,11 @@
+<div class="field">
+    <img alt="" src="assets/img/icons/uil-arrows-v.png"
+         style="">
+    <input (keyup)="onChange($event)"
+           [class]="inputClass"
+           [class.input-error]="errorMessage"
+           [placeholder]="placeholder"
+           [attr.disabled]="disabled ? true : null"
+           [class.disabled]="disabled" [(ngModel)]="value" [type]="type">
+    <div class="help-block text-danger">{{errorMessage}}</div>
+</div>

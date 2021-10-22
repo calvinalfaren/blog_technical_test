@@ -1,0 +1,49 @@
+.input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px 12px;
+    color: #6c757d;
+    background: #fff;
+    border: solid 1px #ebedf2;
+    border-radius: 6px;
+    -webkit-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+
+}
+
+.input-error { 
+    border: 1px solid #fa5c7c;
+}
+
+.input.disabled {
+    background: #ebedf2;
+    cursor: not-allowed;
+}
+
+.input.full {
+    width: 100%;
+}
+
+.number-validate .input.per-block {
+    width: 60px;
+    height: 70px;
+    border-radius: 5px;
+
+}
+
+.input.no-border {
+    border: 0;
+    height: 100%;
+}
+
+.input.selected {
+    background: whitesmoke;
+}
+
+.input:focus {
+    border-color: #6671ff;
+}
+
+small {
+    color: #98a6ad;
+}

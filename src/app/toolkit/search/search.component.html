@@ -1,0 +1,22 @@
+<div class="field">
+  <app-input [placeholder]="placeholder" type="text"
+      [(value)]="text"
+      (valueChange)="handleInputValueChange($event)"
+      (click)="refreshData($event)"
+      [class.selected]="value !== null"
+      ></app-input>
+  <div *ngIf="noResultFound" class="search-not-found">
+    No Result Found
+  </div>
+  <div *ngIf="getDataKeys().length !== 0" class="search-dropdown">
+      <div *ngFor="let key of getDataKeys()" 
+            class="search-dropdown-item"
+            [class.disabled]="isDataDisabled(key)"
+            (click)="triggerDropdownItemClick(key)">
+        {{ findItem(key).text }}
+      </div>
+  </div>
+  <div class="field-error">
+    {{ errorMessage }}
+  </div>
+</div>

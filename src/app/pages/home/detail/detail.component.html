@@ -1,0 +1,21 @@
+<h5>{{detailPost.title}}</h5>
+
+<img *ngIf="!detailPost.image_url" src="../../../assets/img/app/no-image.png" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+<img *ngIf="detailPost.image_url" src="{{detailPost.image_url}}" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+
+<div>{{ detailPost.content }}</div>
+
+<div *ngFor="let commentPost of commentPosts">
+  <strong>{{ commentPost.name }}</strong>{{ commentPost.comment }}
+</div>
+
+<div style="display: flex">
+  <Button (click)="navigateComment('b')">Back</Button>
+  <div>{{ curentPage }}</div>
+  <Button (click)="navigateComment('n')">Next</Button>
+</div>
+
+<div style="display: flex;">
+  <input type="text" [(ngModel)]="inputComment">
+  <button (click)="sendComment()">Kirim</button>
+</div>

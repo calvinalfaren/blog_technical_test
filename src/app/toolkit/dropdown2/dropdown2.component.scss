@@ -1,0 +1,154 @@
+@import "../../theme/styles/variables";
+
+.dropdown {
+    &-noresult {
+        padding-top: 15px;
+        text-align: center;
+    }
+    
+    &-input {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        padding: 8px 15px;
+        background: white;
+        border: 1px solid #ebedf2;
+        width: 100%;
+        border-radius: 6px;
+
+        > input {
+            width: 100%;
+            box-sizing: border-box;
+            background: white;
+            display: inline-block;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &.border-purple {
+            border: 1px solid #b7bcff;
+            border-bottom: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+    }
+
+    &-error {
+        border: 1px solid red;
+    }
+    
+    &-wrapper {
+        position: relative;
+        //margin-bottom: 10px;
+
+        .fa.fa-angle-down {
+            margin-left: 1rem;
+        }
+        
+        .disabled {
+            background: #ebedf2;
+            cursor: not-allowed;
+        }
+        .input-new-organization {
+            flex: 1;
+            margin-right: 24px;
+            box-sizing: border-box;
+            padding: 8px 12px;
+            color: #6c757d;
+            background: #fff;
+            border: solid 1px #ebedf2;
+            border-radius: 6px;
+            transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+
+        }
+        .button-cancel-organization {
+            border-radius: 6px;
+            border: solid 1px $blue-color;
+            background-color: #fff;
+            width: 90px;
+            padding-top: 10px;
+            padding-bottom: 9px;
+            cursor: pointer;
+        }
+        
+        .add-dropdown {
+            display: flex;
+        }
+
+        &.back-default {
+            border: 1px solid #ebedf2;
+            border-radius: 6px;
+        }
+        .input-dropdown {
+            margin: 0px 15px;
+        }
+        .multiple-value {
+            display: flex;
+            flex: 1;
+            &-field {
+                border-radius: 3px;
+                background-color: $blue-color;
+                color: #fff;
+                padding: 2px 8px 1px 8px;
+                margin-right: 8px;
+                font-size: 14px;
+                align-self: center;
+            }
+        }
+    }
+
+    &-not-found {
+        position: absolute;
+        padding: 12px;
+        background: white;
+        // max-height: 250px;
+        overflow-y: auto;
+        width: 100%;
+        border:1px solid ebedf2;
+    }
+
+    &-area {
+        position: absolute;
+        background: white;
+        // max-height: 250px;
+        overflow-y: auto;
+        z-index: 100;
+        width: 100%;
+        border:1px solid #b7bcff;
+        border-top: 0px;
+        border-radius: 6px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        padding-bottom: 10px;
+
+        &-item {
+            height: 38px;
+
+            &:hover {
+                cursor: pointer;
+                background: $grey-hover-color;
+            }
+
+            &.disabled {
+                background: darkgray;
+
+                &:hover {
+                    cursor: no-drop;
+                }
+            }
+        }
+    }
+}
+
+.field {
+    position: relative;
+}
+
+input[class="selected"] > .field > input {
+    background: whitesmoke;
+}
