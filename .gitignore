@@ -44,6 +44,4 @@ Thumbs.db
 
 src/app/app.local.ts
 
-proxy.conf.json
-
 src/assets/img/logo.*

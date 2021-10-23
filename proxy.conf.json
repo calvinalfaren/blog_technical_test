@@ -1,0 +1,8 @@
+{
+    "/api": {
+      "target": "https://dev-sample-api.e-learning.co.id/api",
+      "secure": false,
+      "changeOrigin": true,
+      "pathRewrite": { "/api": "" }
+    }
+  }
